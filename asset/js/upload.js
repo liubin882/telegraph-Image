@@ -213,13 +213,14 @@ function render_uploaded() {
     uploaded_files.forEach(function (x) {
         var resp = x.resp;
         var name = resp.data.url.split('/').pop();
-        
-        const WPRAW = "https://i3.wp.com/telegra.ph"  //使用wordpress.com加速
-        const PhRAW = "https://telegra.ph"   //原地址
+
+        const yPRAW = "https://im.gurl.eu.org"  //使用wordpress.com加速
+        const WPRAW = "https://img.nickyam.com"  //使用wordpress.com加速
+        const PhRAW = "https://missuo.ru"   //原地址
         const PROXYURL = ""  //自定义加速域名 默认是使用cloudflare
         const BASE_PROXYURL = PROXYURL ? PROXYURL : BASE_URL;
         
-        var url = resp.data.thumb == null ? BASE_PROXYURL + resp.data.url : BASE_PROXYURL + resp.data.thumb.url;
+        var url = resp.data.thumb == null ? yPRAW + resp.data.url : yPRAW + resp.data.thumb.url;
         var wpurl = resp.data.thumb == null ? WPRAW + resp.data.url : WPRAW + resp.data.thumb.url;
         var RAW = resp.data.thumb == null ? PhRAW + resp.data.url : PhRAW + resp.data.thumb.url;
         $('#imagedetail').append(formatHtml({ url: url, code: url, wp: wpurl, raw: RAW }));
