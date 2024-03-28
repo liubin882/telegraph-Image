@@ -214,7 +214,7 @@ function render_uploaded() {
         var resp = x.resp;
         var name = resp.data.url.split('/').pop();
 
-        const yPRAW = "https://im.gurl.eu.org"  //使用wordpress.com加速
+        const yPRAW = "https://pp.do"  //使用wordpress.com加速
         const WPRAW = "https://img.nickyam.com"  //使用wordpress.com加速
         const PhRAW = "https://missuo.ru"   //原地址
         const PROXYURL = ""  //自定义加速域名 默认是使用cloudflare
